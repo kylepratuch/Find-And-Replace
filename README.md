@@ -10,7 +10,7 @@ _Find and Replace allows a user to type out a phrase or sentence, determine a pa
 
 ## Setup
 
- * Clone this repository: run command ```git clone https://github.com/kylepratuch/find-replace.git ``` then change directory to top level of project folder.
+ * Clone this repository: run command ```git clone https://github.com/kylepratuch/Find-And-Replace.git ``` then change directory to top level of project folder.
  * Open find_replace.html in your browser.
  * To run the included tests, open spec-runner.html in your browser.
 
