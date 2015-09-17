@@ -1,10 +1,9 @@
 //JavaScript:
 var findReplace = function(phrase, subPhrase, replaceWith) {
-    for (var i = 0; i <= phrase.length; i++) {
-        var result = phrase.replace(subPhrase, replaceWith);
-    }
+
+    var searchFor = new RegExp(subPhrase, 'g');
+    var result = phrase.replace(searchFor, replaceWith);
     return result;
-    console.log(result);
 };
 
 //jQuery for page display:

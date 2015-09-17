@@ -27,7 +27,7 @@ describe ("findReplace", function() {
 
 
 
-    //multiple matches
+
     //capitalization
     //negative cases: "hi there my friend", "banana" -> ?
     //partial matches: "hello", "he", should not produce a match.
