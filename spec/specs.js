@@ -25,11 +25,15 @@ describe ("findReplace", function() {
         expect(findReplace("Hey there, friend!", "friend!", "buddy...")).to.equal("Hey there, buddy...");
     });
 
+    it("returns original phrase if no matches are found", function() {
+        expect(findReplace("Hey there, friend!", "banana", "buddy")).to.equal("Hey there, friend!");
+    });
+
 
 
 
     //capitalization
-    //negative cases: "hi there my friend", "banana" -> ?
+
     //partial matches: "hello", "he", should not produce a match.
 
 });
