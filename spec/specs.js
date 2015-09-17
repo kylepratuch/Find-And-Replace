@@ -16,8 +16,12 @@ describe ("findReplace", function() {
         expect(findReplace("Hey there, friend!", "Hey there", "See you soon")).to.equal("See you soon, friend!");
     });
 
+    it("replaces punctuation only when specified", function() {
+        expect(findReplace("Hey there, friend!", "friend", "buddy")).to.equal("Hey there, buddy!");
+        expect(findReplace("Hey there, friend!", "friend!", "buddy...")).to.equal("Hey there, buddy...");
+    });
+
     //multiple matches
-    //punctuation
     //capitalization
     //negative cases: "hi there my friend", "banana" -> ?
     //partial matches: "hello", "he", should not produce a match.
