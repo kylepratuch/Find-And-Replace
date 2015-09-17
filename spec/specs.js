@@ -20,20 +20,19 @@ describe ("findReplace", function() {
         expect(findReplace("Hi friend! You're my friend.", "friend", "enemy")).to.equal("Hi enemy! You're my enemy.");
     });
 
-    it("replaces punctuation only when specified", function() {
+    it("ignores punctuation", function() {
         expect(findReplace("Hey there, friend!", "friend", "buddy")).to.equal("Hey there, buddy!");
-        expect(findReplace("Hey there, friend!", "friend!", "buddy...")).to.equal("Hey there, buddy...");
     });
 
     it("returns original phrase if no matches are found", function() {
         expect(findReplace("Hey there, friend!", "banana", "buddy")).to.equal("Hey there, friend!");
     });
 
+    it("ignores case when searching for words", function() {
+        expect(findReplace("Hey there, friend!", "hey", "Whoa")).to.equal("Whoa there, friend!");
+    });
 
-
-
-    //capitalization
-
-    //partial matches: "hello", "he", should not produce a match.
-
+    it("does not replace when it finds a partial match", function() {
+        expect(findReplace("Hey there, friend!", "he", "Whoa")).to.equal("Hey there, friend!");
+    });
 });

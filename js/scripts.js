@@ -1,7 +1,7 @@
 //JavaScript:
 var findReplace = function(phrase, subPhrase, replaceWith) {
 
-    var searchFor = new RegExp(subPhrase, 'g');
+    var searchFor = new RegExp("\\b" + subPhrase + "\\b", 'gi');
     var result = phrase.replace(searchFor, replaceWith);
     return result;
 };
