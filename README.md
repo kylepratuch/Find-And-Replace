@@ -1,6 +1,6 @@
 # Find and Replace
 
-##### Find part of a string and replace it with something else, 9/11/15_
+##### Find part of a string and replace it with something else, 9/11/15
 
 #### By _Kyle Pratuch_
 
