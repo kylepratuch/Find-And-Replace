@@ -16,10 +16,16 @@ describe ("findReplace", function() {
         expect(findReplace("Hey there, friend!", "Hey there", "See you soon")).to.equal("See you soon, friend!");
     });
 
+    it("replaces multiple matches", function() {
+        expect(findReplace("Hi friend! You're my friend.", "friend", "enemy")).to.equal("Hi enemy! You're my enemy.");
+    });
+
     it("replaces punctuation only when specified", function() {
         expect(findReplace("Hey there, friend!", "friend", "buddy")).to.equal("Hey there, buddy!");
         expect(findReplace("Hey there, friend!", "friend!", "buddy...")).to.equal("Hey there, buddy...");
     });
+
+
 
     //multiple matches
     //capitalization
